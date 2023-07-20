@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+    font-family: 'LilitaOne';
+    src: url('./static/fonts/LilitaOne-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'OpenSans';
+    src: url('./static/fonts/OpenSans.ttf');
+}
