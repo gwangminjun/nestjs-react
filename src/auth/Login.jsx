@@ -1,4 +1,5 @@
 import React from 'react';
+import rigthImage from '../static/img/login-Right.jpg';
 
 export default function Login(){
     return (
@@ -26,15 +27,26 @@ export default function Login(){
                     </div>
                 </div>
                 <div className='w-screen grow'>
-                    <div className='flex'>
-                        <div className='basis-1/2'>
-                            11
-                        </div>
-                        <div className='basis-1/2'>
-                        <div className="bg-loginright bg-cover">
-
+                    <div className='flex h-4/5'>
+                        <div className='basis-1/2 flex justify-center items-center'>
+                        <form className='w-1/2'>
+                            <div className='flex flex-col w-full h-full'>
+                                <div className='text-7xl pb-2.5 drop-shadow-lg'>Welcome!</div>
+                                <input type="text" name="id" placeholder="아이디를 입력하세요" className='border h-16 mb-4 rounded-lg px-8 drop-shadow-lg'/>
+                                <input type="password" name="password" placeholder="비밀번호를 입력하세요" className='border h-16 mb-4 rounded-lg px-8 drop-shadow-lg'/>
+                                <div className='text-right h-16'>
+                                    <button type="submit" className='w-1/4 h-4/5 text-white bg-sky-500 hover:bg-sky-700 rounded-lg drop-shadow-lg'>로그인</button>
+                                </div>
                             </div>
-                            22
+                        </form>
+                        </div>
+                        <div className='basis-1/2 overflow-hidden rounded-lg drop-shadow-lg'>
+                            <img src={rigthImage} className='h-full'></img>
+                        </div>
+                    </div>
+                    <div className='h-1/5'>
+                        <div className='w-full h-full flex justify-center items-center'>
+                            <div>tyche0529@naver.com</div>
                         </div>
                     </div>
                 </div>
