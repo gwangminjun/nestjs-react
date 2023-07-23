@@ -20,7 +20,7 @@ export default function LoingForm(){
         }
     };
 
-    const { loading, loggedIn, error } = useSelector((state) => state.auth);
+    const { loading, error } = useSelector((state) => state.auth);
     
     const inputClass = 'border h-16 mb-4 rounded-lg px-8 drop-shadow-lg';
 
