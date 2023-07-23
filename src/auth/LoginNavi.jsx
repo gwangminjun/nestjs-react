@@ -10,6 +10,7 @@ export default function LoginNavi(){
     const handlerLogout = () => {
         if(loggedIn){
             dispatch(logoutAsyncThunk());
+            window.location.reload();
         }
     }
 
