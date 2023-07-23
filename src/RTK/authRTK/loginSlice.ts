@@ -5,7 +5,7 @@ interface AuthState {
     loading: boolean;
     loggedIn: boolean;
     error: string | null;
-  }
+}
 
 const initialState : AuthState = {
     loading: false,
