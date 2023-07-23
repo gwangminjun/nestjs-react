@@ -5,8 +5,8 @@ import reactImg from '../static/img/react.png';
 import reduxImg from '../static/img/redux.png';
 import nestjsImg from '../static/img/nestjs.png';
 import typeScriptImg from '../static/img/typescript.png';
+import ubuntuImg from '../static/img/ubuntu.png';
 import dockerImg from '../static/img/docker.png';
-
 import LoginFrom from './LoginFrom';
 import LoginNavi from './LoginNavi';
 
@@ -28,12 +28,13 @@ export default function Login(){
                     </div>
                     <div className='h-1/5'>
                         <div className='w-full h-full flex justify-around items-center'>
-                            <img src={reactImg} className='h-24'/>
-                            <img src={reduxImg} className='h-24'/>
-                            <img src={nestjsImg} className='h-24'/>
-                            <img src={typeScriptImg} className='h-24'/>
-                            <img src={dockerImg} className='h-24'/>
-                            <img src={github} className='h-24'/>
+                            <img src={reactImg} className='h-16'/>
+                            <img src={reduxImg} className='h-16'/>
+                            <img src={nestjsImg} className='h-16'/>
+                            <img src={typeScriptImg} className='h-16'/>
+                            <img src={dockerImg} className='h-16'/>
+                            <img src={ubuntuImg} className='h-16'/>
+                            <img src={github} className='h-16'/>
                         </div>
                     </div>
                 </div>
