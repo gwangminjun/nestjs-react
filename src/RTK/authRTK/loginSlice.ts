@@ -1,20 +1,36 @@
-import { createAsyncThunk } from '@reduxjs/toolkit';
-import axios from 'axios';
+import { createSlice } from "@reduxjs/toolkit";
+import { loginAxios } from "./loginAsyncThunk";
 
-type UserInfo = {id : string, password : string};
+interface AuthState {
+    loading: boolean;
+    loggedIn: boolean;
+    error: string | null;
+  }
 
-export const loginAxios = createAsyncThunk( 'auth/loginCertification', async(userinfo : UserInfo) => {
-    try{
-        const response = await axios.post('/auth/postLogin', userinfo, {withCredentials: true});
-        const token = response.data.accessToken;
-        document.cookie = `token=${token}; path=/;`; // 토큰을 쿠키에 저장
-        return token;
-    }catch(error){
-        throw new Error('로그인 실패하였습니다');
+const initialState : AuthState = {
+    loading: false,
+    loggedIn: false,
+    error: null,
+};
+
+export const loginSlice = createSlice({
+    name : 'auth',
+    initialState,
+    reducers: {}, // 단순한 동기적인 액션에 대한 리듀서를 정의
+    extraReducers : builder => { // 비동기적인 액션에 대한 리듀서를 정의
+        builder
+            .addCase(loginAxios.pending, state => {
+                state.loading = true;
+                state.error = null;
+            })
+            .addCase(loginAxios.fulfilled, (state, action) => {
+                state.loading = false;
+                state.loggedIn = action.payload;
+                state.error = null;
+            })
+            .addCase(loginAxios.rejected, (state, action) => {
+                state.loading = false;
+                state.error = action.error.message || '로그인 실패하였습니다';
+            });
     }
 });
-
-// 로그아웃 시 쿠키에서 토큰 삭제하는 함수
-export const logout = () => {
-    document.cookie = 'token=; path=/; expires=Thu, 01 Jan 1970 00:00:00 UTC'; 
-  };
