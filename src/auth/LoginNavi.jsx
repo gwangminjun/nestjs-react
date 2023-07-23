@@ -1,10 +1,11 @@
 import React from "react";
+import logo from "../static/img/Switch-logo.png";
 
 export default function LoginNavi(){
     return(
         <div className='drop-shadow-md border-2 flex justify-between items-center px-4 py-2 shadow-soft-2xl rounded-blur bg-white/80 backdrop-blur-2xl w-4/6 h-16 rounded-full'>
             <div className='py-2.375 basis-1/3'>
-                <p className='font-openSans whitespace-nowrap font-extrabold pl-5'>Switch Project Homepage</p>
+                <img src={logo} className="invert w-3/5 h-1/2"></img>
             </div>
             <div className='basis-1/3 py-2.375 mr-4 ml-4'>
                 <div className='flex justify-around w-full'>
