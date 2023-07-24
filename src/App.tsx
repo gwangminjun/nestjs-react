@@ -3,14 +3,15 @@ import React from 'react';
 import Login from './auth/Login';
 import PrivateRouter from './privatePage/PrivateRouter';
 import { Routes, Route } from "react-router-dom";
-import LoginState from './auth/LoginState';
+import { useSelector } from 'react-redux';
 
 function App() {
+  const { loggedIn } = useSelector((state : any) => state.auth);
   return (
     <div className="App">
       <Routes>
         <Route path="/" element={<Login/>} />
-        {LoginState() && <Route path="/private" element={<PrivateRouter/>}/>}
+        {loggedIn && <Route path="/private" element={<PrivateRouter/>}/>}
       </Routes>
     </div>
   );
