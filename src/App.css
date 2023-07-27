@@ -11,3 +11,13 @@
     font-family: 'OpenSans';
     src: url('./static/fonts/OpenSans.ttf');
 }
+
+@font-face {
+    font-family: 'Monoton';
+    src: url('./static/fonts/Monoton-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Itim';
+    src: url('./static/fonts/Itim-Regular.ttf');
+}

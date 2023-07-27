@@ -5,7 +5,10 @@ module.exports = {
     extend: {
       fontFamily:{
         'lilitaOne':['LilitaOne'],
-        'OpenSans' : ['OpenSans']
+        'OpenSans' : ['OpenSans'],
+        'fantasy':['fantasy'],
+        'Monoton':['Monoton'],
+        'Itim':['Itim'],
       },
       backgroundImage: {
         'loginright': "url('./static/img/login-Right.jpg)",

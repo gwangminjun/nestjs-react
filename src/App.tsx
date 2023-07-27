@@ -11,7 +11,8 @@ function App() {
     <div className="App">
       <Routes>
         <Route path="/" element={<Login/>} />
-        {loggedIn && <Route path="/private" element={<PrivateRouter/>}/>}
+        {/* {loggedIn && <Route path="/private" element={<PrivateRouter/>}/>} */}
+        <Route path="/private" element={<PrivateRouter/>}/>
       </Routes>
     </div>
   );
