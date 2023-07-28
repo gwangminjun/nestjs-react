@@ -13,7 +13,7 @@ const initialState : AuthState = {
     loading: false,
     loggedIn: false,
     error: null,
-    isTockenIn : false
+    isTockenIn : false,
 };
 
 export const loginSlice = createSlice({
