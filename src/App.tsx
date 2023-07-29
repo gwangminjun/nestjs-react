@@ -1,7 +1,7 @@
 import './App.css';
 import React, { lazy, Suspense } from 'react';
 import { Routes, Route } from "react-router-dom";
-import { useSelector } from 'react-redux';
+//import { useSelector } from 'react-redux';
 
 const Login = lazy(() => import('./auth/Login'));
 const PrivateRouter = lazy(() => import('./privatePage/PrivateRouter'));
@@ -18,7 +18,7 @@ const LoadingPage = () => {
 }
 
 function App() {
-  const { loggedIn } = useSelector((state : any) => state.auth);
+//  const { loggedIn } = useSelector((state : any) => state.auth);
 
   return (
     <div className="App">
